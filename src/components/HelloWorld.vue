@@ -1,6 +1,7 @@
 <template lang="pug">
 .container
   h1 {{ data }}
+  button(@click="changeText()") 子組件印出 console
 </template>
 
 <script>
@@ -13,10 +14,14 @@ export default {
     msg: String
   },
 
-  setup(props) {
+  setup(props, context) {
     const data = ref(props.msg);
 
-    return { data };
+    function changeText() {
+      context.emit('change', 'Hello Vite Vue3')
+    }
+
+    return { data, changeText };
   }
 }
 </script>

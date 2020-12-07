@@ -1,6 +1,6 @@
 <template lang="pug">
 .wrap
-  HelloWorld(:msg="msg")
+  HelloWorld(:msg="msg" @change="showText")
   TodoList
 </template>
 
@@ -22,7 +22,11 @@ export default {
       msg: 'Vite props text'
     })
 
-    return { ...toRefs(state) };
+    function showText(params) {
+      console.log(params);
+    }
+
+    return { ...toRefs(state), showText };
   }
 }
 </script>
