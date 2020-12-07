@@ -1,20 +1,20 @@
 <template lang="pug">
 .wrap
-  h3 {{ state.name }}
-  div 年齡：{{ state.age }}
+  h3 {{ name }}
+  div 年齡：{{ age }}
   button(@click="add") 年齡遞增+1
-  div 計算年齡x2的結果： {{ state.double }}
+  div 計算年齡x2的結果： {{ double }}
 </template>
 
 <script>
-import { computed, reactive } from 'vue'
+import { computed, reactive, toRefs } from 'vue'
 
 export default {
   name: 'todolist',
 
   setup() {
     const state = reactive({
-      msg: 'Pitt',
+      name: 'Pitt',
       age: 32,
       double: computed(() => {
         return state.age * 2
@@ -25,7 +25,7 @@ export default {
       state.age += 1
     }
 
-    return { state, add };
+    return { ...toRefs(state), add };
   }
 }
 </script>
