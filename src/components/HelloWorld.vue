@@ -1,19 +1,22 @@
 <template lang="pug">
 .container
-  h1 {{ msg }}
-  button(@click="count++") count is: {{ count }}
+  h1 {{ data }}
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
   name: 'HelloWorld',
+
   props: {
     msg: String
   },
-  data() {
-    return {
-      count: 0
-    }
+
+  setup(props) {
+    const data = ref(props.msg);
+
+    return { data };
   }
 }
 </script>
