@@ -13,9 +13,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "todolist" */ '../pages/TodoList.vue'),
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/About.vue'),
+    path: '/menu',
+    name: 'Menu',
+    component: () => import(/* webpackChunkName: "menu" */ '../pages/Menu.vue'),
   },
   {
     path: '/:notFound(.*)',

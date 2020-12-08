@@ -1,21 +1,19 @@
 <template lang="pug">
 .home
   router-link(to="/todolist") TodoList
-  router-link(to="/about") About
+  router-link(to="/menu") Menu
 </template>
 
 <script lang="ts">
-// import { ref } from 'vue'
-
 export default {
-  name: 'home'
-}
+  name: "home",
+};
 </script>
 
 <style>
-  .home {
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-  }
+.home {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
 </style>
