@@ -8,7 +8,6 @@
       :key="index"
     ) {{ item }}
   div 你選擇了： {{ isSelected }}
-  button(@click="overAction") complete
 </template>
 
 <script lang="ts" setup>
@@ -23,9 +22,6 @@ ref: menuList = ["炸雞", "薯條", "可樂"];
 ref: isSelected = "";
 const selectFood = (index: number) => {
   isSelected = menuList[index];
-};
-const overAction = () => {
-  title = title + "選擇完成";
 };
 </script>
 
