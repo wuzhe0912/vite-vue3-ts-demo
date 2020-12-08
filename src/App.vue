@@ -1,12 +1,12 @@
 <template lang="pug">
 .wrap
   HelloWorld(:msg="msg" @change="showText")
-  TodoList
+  Demo
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import TodoList from './components/TodoList.vue'
+import Demo from './components/Demo.vue'
 import { reactive, toRefs } from 'vue'
 
 export default {
@@ -14,7 +14,7 @@ export default {
 
   components: {
     HelloWorld,
-    TodoList
+    Demo
   },
 
   setup() {

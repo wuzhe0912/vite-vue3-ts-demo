@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import { computed, reactive, toRefs } from 'vue'
+import { ref, computed, reactive, toRefs, watch } from 'vue'
 
 export default {
-  name: 'todolist',
+  name: 'demo',
 
   setup() {
     const state = reactive({
@@ -19,6 +19,16 @@ export default {
       double: computed(() => {
         return state.age * 2
       })
+    })
+
+    watch(() => state.age, (newVal, oldVal, clean) => {
+      console.log(`${state.name}，改變前年齡：${oldVal}，改變後年齡：${newVal}`)
+      // 初始化
+      clean(
+        () => {
+          console.log('clean')
+        }
+      )
     })
 
     function add() {
