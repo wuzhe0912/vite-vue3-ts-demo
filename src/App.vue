@@ -4,7 +4,7 @@
   Demo
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import Demo from './components/Demo.vue'
 import { reactive, toRefs } from 'vue'

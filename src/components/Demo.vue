@@ -6,7 +6,7 @@
   div 計算年齡x2的結果： {{ double }}
 </template>
 
-<script>
+<script lang="ts">
 import { ref, computed, reactive, toRefs, watch } from 'vue'
 
 export default {

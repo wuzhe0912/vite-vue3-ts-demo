@@ -4,7 +4,7 @@
   button(@click="changeText()") 子組件印出 console
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue'
 
 export default {
