@@ -25,7 +25,6 @@ import { useStore } from "vuex";
 
 const store = useStore();
 const list = computed(() => store.state.list);
-console.log(list);
 const inputValue = ref("");
 const createList = () => {
   store.commit("createList", {

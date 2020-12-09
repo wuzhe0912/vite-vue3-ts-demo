@@ -1,17 +1,23 @@
 <template lang="pug">
 .wrap
   button(@click="getImgApi") 取得圖片
-  img(:src="res.message", alt="img")
+  img(:src="formData.message", alt="img")
   router-link(to="/") Back Home
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { getBeautyImg } from "../hooks/api";
 
-ref: res = String;
-const getImgApi = () => {
-  const { result, loading } = getBeautyImg("https://apiblog.jspang.com/default/getGirl");
+ref: formData = {} as {
+  message: string;
+  status: string;
+};
+const getImgApi = async () => {
+  const { result, loading } = await getBeautyImg(
+    "https://dog.ceo/api/breeds/image/random"
+  );
+  formData = result;
 };
 </script>
 

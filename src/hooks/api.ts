@@ -1,17 +1,16 @@
-import { ref } from 'vue';
 import axios from 'axios';
 
-const getBeautyImg = (url: string) => {
-  const result = ref(null)
-  const loading = ref(true)
-  const error = ref(null)
+const getBeautyImg = async(url: string) => {
+  let result = ''
+  let loading = true
+  let error = ''
 
-  axios.get(url).then((response) => {
-    loading.value = false;
-    result.value = response.data;
+  await axios.get(url).then((response) => {
+    loading = false;
+    result = response.data;
   }).catch(error => {
-    error.value = error;
-    loading.value = false;
+    error = error;
+    loading = false;
   })
 
   return { result, loading, error }

@@ -18,7 +18,6 @@ export default createStore({
 
     updateList(state: any, payload: any) {
       const { index, status } = payload
-      console.log(index, status);
       state.list[index].isFinished = status
     },
 
