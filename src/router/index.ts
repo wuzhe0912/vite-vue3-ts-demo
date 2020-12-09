@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "menu" */ '../pages/Menu.vue'),
   },
   {
+    path: '/beauty',
+    name: 'Beauty',
+    component: () => import(/* webpackChunkName: "beauty" */ '../pages/Beauty.vue'),
+  },
+  {
     path: '/:notFound(.*)',
     name: 'Error',
     component: () => import(/* webpackChunkName: "error" */ '../pages/Error.vue'),
