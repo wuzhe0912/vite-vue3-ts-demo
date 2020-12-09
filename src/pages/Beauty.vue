@@ -14,7 +14,7 @@ ref: formData = {} as {
   status: string;
 };
 const getImgApi = async () => {
-  const { result, loading } = await getBeautyImg(
+  const { result, loading, error } = await getBeautyImg(
     "https://dog.ceo/api/breeds/image/random"
   );
   formData = result;

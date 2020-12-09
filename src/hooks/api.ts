@@ -8,8 +8,8 @@ const getBeautyImg = async(url: string) => {
   await axios.get(url).then((response) => {
     loading = false;
     result = response.data;
-  }).catch(error => {
-    error = error;
+  }).catch(err => {
+    error = err;
     loading = false;
   })
 

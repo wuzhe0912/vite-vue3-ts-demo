@@ -10,6 +10,7 @@ ref: list = [
   { label: "TodoList", path: "/todolist" },
   { label: "Menu", path: "/menu" },
   { label: "Beauty", path: "/beauty" },
+  { label: "Dashboard", path: "/dashboard" },
 ];
 </script>
 
@@ -17,6 +18,6 @@ ref: list = [
 .home {
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 300px;
 }
 </style>
