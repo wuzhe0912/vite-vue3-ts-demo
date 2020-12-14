@@ -1,9 +1,9 @@
 {
-  // "vue3snippets.enable-compile-vue-file-on-did-save-code": true,
   "editor.fontSize": 20,
   "files.autoSave": "onFocusChange",
+
   // --- Prettier ---
-  // 存檔後自動執行
+  // 存檔後自動格式化
   "editor.formatOnSave": true,
   "[javascript, typescript]": {
       "editor.formatOnSave": true
@@ -16,12 +16,14 @@
   "prettier.semi": true,
   // 字與括號保有空格
   "prettier.bracketSpacing": true,
+
   // --- Eslint ---
-  // eslint 自動修正
+  // 每次存檔時將 code 依照 eslint 格式自動修正
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
     "javascript",
-    "typescript"
+    "typescript",
+    "vue"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
