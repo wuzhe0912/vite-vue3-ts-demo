@@ -11,13 +11,18 @@ ref: list = [
   { label: "Menu", path: "/menu" },
   { label: "Beauty", path: "/beauty" },
   { label: "Dashboard", path: "/dashboard" },
+  { label: "Video", path: "/video" },
 ];
 </script>
 
 <style>
 .home {
   display: flex;
-  justify-content: space-between;
-  width: 300px;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.link {
+  margin-right: 12px;
 }
 </style>

@@ -28,6 +28,11 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "beauty" */ '../pages/Dashboard/index.vue'),
   },
   {
+    path: '/video',
+    name: 'Video',
+    component: () => import(/* webpackChunkName: "video" */ '../pages/Video.vue'),
+  },
+  {
     path: '/:notFound(.*)',
     name: 'Error',
     component: () => import(/* webpackChunkName: "error" */ '../pages/Error.vue'),
