@@ -1,8 +1,21 @@
 @use '_function' as func;
 
 $color-primary: #3fd0d4;
+$color-green: #4fc08d;
 
 $white: #fff;
-$dark-black: #222;
+$black: #222;
 $light-grey: #ececec;
 $dark-grey: #afafaf;
+
+$light-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.25);
+$dark-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+// font
+$font-normal: func.to-rem(16);
+$font-mini: $font-normal * 0.75; // 12px
+$font-small: $font-normal * 0.875; // 14px
+$font-big: $font-normal * 1.25; // 20px
+$font-large: $font-normal * 1.5; // 24px
+$font-huge: $font-normal * 2.75; // 44px
+$font-mega: $font-normal * 4.5; // 72px

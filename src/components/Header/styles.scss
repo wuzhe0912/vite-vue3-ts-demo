@@ -1,0 +1,54 @@
+@use '../../scss/function' as func;
+@use '../../scss/variable' as var;
+
+.header__wrap {
+  display: grid;
+  padding: func.to-rem(12) func.to-rem(36);
+  grid-template-columns: func.to-rem(300) 1fr;
+  background: var.$light-grey;
+  color: var.$black;
+  box-shadow: var.$light-shadow;
+}
+// logo
+.logo__container {
+  display: flex;
+}
+.logo__image {
+  img {
+    position: relative;
+    width: func.to-rem(100);
+    height: func.to-rem(100);
+    z-index: 2;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: func.to-rem(5);
+    left: func.to-rem(20);
+    width: func.to-rem(65);
+    height: func.to-rem(60);
+    border: func.to-rem(6) solid var.$color-green;
+    box-shadow: var.$light-shadow;
+  }
+}
+.logo__title {
+  margin-top: func.to-rem(24);
+  font-size: func.to-rem(36);
+  span {
+    color: var.$color-primary;
+  }
+}
+// nav
+.nav__list {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: 100px 100px;
+}
+.list {
+  margin: func.to-rem(24) 0 0 func.to-rem(48);
+  font-size: var.$font-large;
+  cursor: pointer;
+  &:hover {
+    color: var.$color-primary;
+  }
+}

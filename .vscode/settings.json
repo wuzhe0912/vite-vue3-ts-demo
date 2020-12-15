@@ -1,6 +1,5 @@
 {
   "editor.fontSize": 20,
-  "files.autoSave": "onFocusChange",
   // --- Eslint ---
   "editor.formatOnSave": true,  // 存檔後自動格式化
   "eslint.autoFixOnSave": true, // 每次存檔時將 code 依照 eslint 格式自動修正

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "types": [
+      "vite",
+    ],
+    "moduleResolution": "Node"
+  }
+}

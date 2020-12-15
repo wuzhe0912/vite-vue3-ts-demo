@@ -5,17 +5,17 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../pages/Home.vue'),
+    component: () => import(/* webpackChunkName: "home" */ '../pages/Home/index.vue'),
+  },
+  {
+    path: '/favorites',
+    name: 'Favorites',
+    component: () => import(/* webpackChunkName: "favorites" */ '../pages/Favorites/index.vue'),
   },
   {
     path: '/todolist',
     name: 'TodoList',
     component: () => import(/* webpackChunkName: "todolist" */ '../pages/TodoList.vue'),
-  },
-  {
-    path: '/menu',
-    name: 'Menu',
-    component: () => import(/* webpackChunkName: "menu" */ '../pages/Menu.vue'),
   },
   {
     path: '/beauty',

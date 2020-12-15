@@ -16,9 +16,8 @@ const getBeautyImg = async (url: string) => {
   return { result, loading, error }
 }
 
-const getVideo = async (url: string) => {
+const getYouTubeVideo = async (url: string) => {
   await axios.get(url).then((response) => {
-    console.log(response)
     loading = false;
     result = response.data.items;
     console.log('api', result);
@@ -29,4 +28,4 @@ const getVideo = async (url: string) => {
   return { result, loading }
 }
 
-export { getBeautyImg, getVideo }
+export { getBeautyImg, getYouTubeVideo }
