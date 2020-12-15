@@ -23,11 +23,6 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "beauty" */ '../pages/Beauty.vue'),
   },
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () => import(/* webpackChunkName: "beauty" */ '../pages/Dashboard/index.vue'),
-  },
-  {
     path: '/video',
     name: 'Video',
     component: () => import(/* webpackChunkName: "video" */ '../pages/Video.vue'),

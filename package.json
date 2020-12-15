@@ -6,10 +6,11 @@
     "build": "vite build"
   },
   "dependencies": {
+    "axios": "latest",
+    "dayjs": "^1.9.7",
     "vue": "^3.0.4",
     "vue-router": "4",
-    "vuex": "^4.0.0-rc.2",
-    "axios": "latest"
+    "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",

@@ -1,12 +1,23 @@
 {
   "editor.fontSize": 20,
   "files.autoSave": "onFocusChange",
-
+  // --- Eslint ---
+  "editor.formatOnSave": true,  // 存檔後自動格式化
+  "eslint.autoFixOnSave": true, // 每次存檔時將 code 依照 eslint 格式自動修正
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // 存檔時自動排版
+  },
   // --- Prettier ---
-  // 存檔後自動格式化
-  "editor.formatOnSave": true,
   "[javascript, typescript]": {
-      "editor.formatOnSave": true
+    "editor.formatOnSave": true
   },
   // 每行寬度
   "prettier.printWidth": 100,
@@ -16,16 +27,4 @@
   "prettier.semi": true,
   // 字與括號保有空格
   "prettier.bracketSpacing": true,
-
-  // --- Eslint ---
-  // 每次存檔時將 code 依照 eslint 格式自動修正
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "vue"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
 }

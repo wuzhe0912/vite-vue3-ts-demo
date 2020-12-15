@@ -10,7 +10,6 @@ ref: list = [
   { label: "TodoList", path: "/todolist" },
   { label: "Menu", path: "/menu" },
   { label: "Beauty", path: "/beauty" },
-  { label: "Dashboard", path: "/dashboard" },
   { label: "Video", path: "/video" },
 ];
 </script>
