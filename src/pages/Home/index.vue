@@ -1,6 +1,9 @@
 <template lang="pug">
-.home 2342342
-  ul 123
+.home__wrap
+  ul.list__wrap
+    li.list__card(v-for="node in data" :key="node.etag")
+      img(:src="node.snippet.thumbnails.high.url", :alt="node.snippet.title")
+      span {{ node.snippet.title }}
 </template>
 
 <script lang="ts" setup>
@@ -10,17 +13,16 @@ import { getYouTubeVideo } from '../../hooks/api';
 ref: data = {} as {
   snippet: [];
 };
+
+const url = `https://www.googleapis.com/youtube/v3/`;
 const apiKey = `AIzaSyDBsUbZjOqi_riKLo-jyBJYVzOY5PkERcc`;
-// const { result } = await getYouTubeVideo(
-//   `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${apiKey}&type=video&maxResults=20`
-// );
-// data = result;
-// console.log('home', data);
-onMounted(() => {
+
+onMounted(async () => {
   console.log('onMounted');
-  const getVideoList = () => {
-    console.log(123);
-  }
+  const { result } = await getYouTubeVideo(
+    `${url}search?part=snippet&key=${apiKey}&type=video&maxResults=12`
+  );
+  data = result;
 });
 </script>
 

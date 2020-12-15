@@ -1,3 +1,3 @@
 <template lang="pug">
-.wrap favorites
+.wrap side bar
 </template>

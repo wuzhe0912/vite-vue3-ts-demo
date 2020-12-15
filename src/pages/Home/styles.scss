@@ -1,2 +1,12 @@
 @use '../../scss/function' as func;
 @use '../../scss/variable' as var;
+
+.home__wrap {
+  display: grid;
+  justify-content: end;
+}
+
+.list__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
