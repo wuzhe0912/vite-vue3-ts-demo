@@ -1,2 +1,16 @@
 @use '../../scss/function' as func;
 @use '../../scss/variable' as var;
+
+.side__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.side__list {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: func.to-rem(112);
+  border-right: var.$border-line;
+  box-shadow: var.$border-shadow;
+}

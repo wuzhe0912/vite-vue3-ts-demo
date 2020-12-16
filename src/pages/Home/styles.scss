@@ -8,5 +8,22 @@
 
 .list__wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: func.to-rem(20);
+  grid-row-gap: func.to-rem(20);
+  padding: func.to-rem(5);
+}
+
+.list__card {
+  border: var.$border-line;
+  box-shadow: var.$border-shadow;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: var.$light-shadow;
+  }
+}
+
+.card__img {
+  width: 100%;
 }

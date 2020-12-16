@@ -2,7 +2,7 @@
 .home__wrap
   ul.list__wrap
     li.list__card(v-for="node in data" :key="node.etag")
-      img(:src="node.snippet.thumbnails.high.url", :alt="node.snippet.title")
+      img.card__img(:src="node.snippet.thumbnails.medium.url", :alt="node.snippet.title")
       span {{ node.snippet.title }}
 </template>
 
