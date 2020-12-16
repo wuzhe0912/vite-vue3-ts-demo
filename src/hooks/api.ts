@@ -4,18 +4,7 @@ let result = ''
 let loading = true
 let error = ''
 
-const getBeautyImg = async (url: string) => {
-  await axios.get(url).then((response) => {
-    loading = false;
-    result = response.data;
-  }).catch(err => {
-    error = err;
-    loading = false;
-  })
-
-  return { result, loading, error }
-}
-
+// 取 YouTube Data API
 const getYouTubeVideo = async (url: string) => {
   await axios.get(url).then((response) => {
     loading = false;
@@ -26,6 +15,18 @@ const getYouTubeVideo = async (url: string) => {
   })
 
   return { result, loading }
+}
+
+const getBeautyImg = async (url: string) => {
+  await axios.get(url).then((response) => {
+    loading = false;
+    result = response.data;
+  }).catch(err => {
+    error = err;
+    loading = false;
+  })
+
+  return { result, loading, error }
 }
 
 export { getBeautyImg, getYouTubeVideo }

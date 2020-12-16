@@ -3,7 +3,10 @@
   ul.list__wrap
     li.list__card(v-for="node in data" :key="node.etag")
       img.card__img(:src="node.snippet.thumbnails.medium.url", :alt="node.snippet.title")
-      span {{ node.snippet.title }}
+      .card__title.ellipsis {{ node.snippet.title }}
+      .card__content
+        .auther.ellipsis {{ node.snippet.channelTitle }}
+        .publish__date {{ node.snippet.publishTime }}
 </template>
 
 <script lang="ts" setup>
@@ -18,7 +21,6 @@ const url = `https://www.googleapis.com/youtube/v3/`;
 const apiKey = `AIzaSyDBsUbZjOqi_riKLo-jyBJYVzOY5PkERcc`;
 
 onMounted(async () => {
-  console.log('onMounted');
   const { result } = await getYouTubeVideo(
     `${url}search?part=snippet&key=${apiKey}&type=video&maxResults=12`
   );
