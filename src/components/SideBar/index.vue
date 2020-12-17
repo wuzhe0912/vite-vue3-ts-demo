@@ -13,6 +13,7 @@ import { ref } from 'vue';
 ref: navList = [
   { code: 'home', name: '首頁', path: '/' },
   { code: 'favorites', name: '收藏', path: '/favorites' },
+  { code: 'test', name: 'Test', path: '/test' },
 ]
 </script>
 
