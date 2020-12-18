@@ -1,15 +1,24 @@
 <template lang="pug">
-.wrap column list
+div.wrap column list
 </template>
 
 <script lang="ts" setup>
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
+
+interface ColumnProps {
+  id: number;
+  title: string;
+  avatar: string;
+  description: string;
+}
 
 defineComponent({
-  name: 'ColumnList'
-})
+  name: 'ColumnList',
+  props: {
+    type: Array as PropType<ColumnProps[]>,
+    required: true,
+  },
+});
 </script>
 
-<style lang="scss" scoped>
-  
-</style>
+<style lang="scss" scoped></style>

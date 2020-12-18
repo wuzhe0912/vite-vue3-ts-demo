@@ -13,19 +13,14 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "favorites" */ '../pages/Favorites/index.vue'),
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: () => import(/* webpackChunkName: "test" */ '../pages/Test.vue'),
+    path: '/note',
+    name: 'Note',
+    component: () => import(/* webpackChunkName: "note" */ '../pages/Note.vue'),
   },
   {
     path: '/todolist',
     name: 'TodoList',
     component: () => import(/* webpackChunkName: "todolist" */ '../pages/TodoList.vue'),
-  },
-  {
-    path: '/video',
-    name: 'Video',
-    component: () => import(/* webpackChunkName: "video" */ '../pages/Video.vue'),
   },
   {
     path: '/:notFound(.*)',

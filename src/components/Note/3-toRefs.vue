@@ -1,5 +1,7 @@
 <template lang="pug">
-.wrap {{ text }}
+.wrap
+  div {{ text }}
+  div {{ num }}
   h2 {{ newName }}
   input.btn(v-model="newName" type="text")
   h2 {{ subName }}
@@ -13,9 +15,13 @@ export default {
   setup() {
     const state = reactive({
       text: 'New Player',
+      num: 10,
       newName: 'Type Anything'
     })
     const subName = ref('Type Anything')
+    setTimeout(() => {
+      state.num = 8;
+    }, 1500);
 
     return { ...toRefs(state), subName }
   }

@@ -1,19 +1,28 @@
 <template lang="pug">
-.wrap {{ state.text }}
+.wrap
+  div {{ state.text }}
+  div {{ state.num }}
+  div {{ state.name }}
 </template>
 
 <script lang="ts">
-import { reactive } from 'vue'
+import { reactive } from "vue";
 
 export default {
   setup() {
     const state = reactive({
-      text: 'Player'
-    })
+      text: 'Player',
+      num: 12,
+      name: 'Pitt',
+    });
 
-    return { state }
-  }
-}
+    setTimeout(() => {
+      state.num = 4;
+    }, 1500);
+
+    return { state };
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
